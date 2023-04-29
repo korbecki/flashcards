@@ -1,0 +1,47 @@
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    padding: 2em;
+    overflow: auto;
+}
+
+.flashcards>div>img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+.flashcards>div>div {
+    height: 50%;
+    margin: 1em;
+    color: #2699FB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flashcards>div {
+    border: 1px solid gray;
+    border-radius: 1em 1em 0 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-flashcards {
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 50px;
+    align-content: center;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-flashcards > a {
+   color: white;
+}

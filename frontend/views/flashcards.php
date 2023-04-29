@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../style/style.css" rel="stylesheet" type="text/css">
+    <link href="frontend/style/style.css" rel="stylesheet" type="text/css">
+    <link href="frontend/style/flashcards.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/fa2eac051b.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Flashcards</title>
 </head>
 <body>
 <div class="base-container">
-    <nav>
-        <img src="../images/logo.svg" alt="Logo">
-        <ul>
-            <li>
-                <i class="fa-regular fa-cards-blank"></i>
-                <a href="#" class="button">Flashcards</a>
-            </li>
-            <li>
-                <i class="fa-regular fa-user-group"></i>
-                <a href="#" class="button">Friends</a>
-            </li>
-        </ul>
-    </nav>
     <main>
         <header>
+            <ul>
+                <li>
+                    <a href="#" class="button">Flashcards</a>
+                </li>
+                <li>
+                    <a href="#" class="button">Friends</a>
+                </li>
+            </ul>
             <div class="search-bar">
                 <form>
                     <input placeholder="Search flashcards">
                 </form>
             </div>
             <div class="add-flashcards">
-                <i class="fa-solid fa-plus"></i>
-                <p>Add project</p>
+                <a href="#">+</a>
             </div>
         </header>
         <section class="flashcards">
-            <div>
-                Projekt 1
+            <div id="project-1">
+                <img src="frontend/images/download/primary_img.jpeg">
+                <div>
+                    <h2>title</h2>
+                    <p>description</p>
+                    <div class="social-section">
+                        <i class="fas fa-heart"> 600</i>
+                        <i class="fas fa-minus-square"> 121</i>
+                    </div>
+                </div>
             </div>
             <div>
                 Projekt 1
