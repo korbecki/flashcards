@@ -40,6 +40,37 @@
                     </div>
                 </div>
             </div>
+            <div id="project-1">
+                <img src="frontend/images/download/primary_img.jpeg">
+                <div>
+                    <h2>title</h2>
+                    <p>description</p>
+                    <div class="social-section">
+                        <i class="fas fa-heart"> 600</i>
+                        <i class="fas fa-minus-square"> 121</i>
+                    </div>
+                </div>
+            </div> <div id="project-1">
+                <img src="frontend/images/download/primary_img.jpeg">
+                <div>
+                    <h2>title</h2>
+                    <p>description</p>
+                    <div class="social-section">
+                        <i class="fas fa-heart"> 600</i>
+                        <i class="fas fa-minus-square"> 121</i>
+                    </div>
+                </div>
+            </div> <div id="project-1">
+                <img src="frontend/images/download/primary_img.jpeg">
+                <div>
+                    <h2>title</h2>
+                    <p>description</p>
+                    <div class="social-section">
+                        <i class="fas fa-heart"> 600</i>
+                        <i class="fas fa-minus-square"> 121</i>
+                    </div>
+                </div>
+            </div>
             <div>
                 Projekt 1
             </div>

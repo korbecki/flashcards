@@ -1,9 +1,39 @@
 section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
     padding: 2em;
     overflow: auto;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2em;
+        padding: 2em;
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-device-width: 800px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+        padding: 2em;
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+        padding: 2em;
+        overflow: auto;
+    }
 }
 
 .flashcards>div>img {
@@ -44,4 +74,25 @@ section {
 
 .add-flashcards > a {
    color: white;
+}
+
+header{
+    display: inline-flex;
+    justify-content: start;
+}
+header>ul{
+    padding: 0;
+    margin: 0;
+    width: 20%;
+}
+header li{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    width: 100% ;
+}
+#base-container{
+    width: 100%;
 }
