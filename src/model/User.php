@@ -4,80 +4,127 @@ namespace model;
 
 class User
 {
+    private $userId;
     private $email;
     private $password;
     private $name;
     private $surname;
+    private $userName;
 
-    public function __construct(string $email, string $password, string $name, string $surname)
+    /**
+     * @param $userId
+     * @param $email
+     * @param $password
+     * @param $name
+     * @param $surname
+     * @param $userName
+     */
+    public function __construct($userId, $email, $password, $name, $surname, $userName)
     {
+        $this->userId = $userId;
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
+        $this->userName = $userName;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getEmail(): string
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @param mixed $userId
+     */
+    public function setUserId($userId): void
+    {
+        $this->userId = $userId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
     {
         return $this->email;
     }
 
     /**
-     * @param string $email
+     * @param mixed $email
      */
-    public function setEmail(string $email)
+    public function setEmail($email): void
     {
         $this->email = $email;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getPassword(): string
+    public function getPassword()
     {
         return $this->password;
     }
 
     /**
-     * @param string $password
+     * @param mixed $password
      */
-    public function setPassword(string $password)
+    public function setPassword($password): void
     {
         $this->password = $password;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param mixed $name
      */
-    public function setName(string $name)
+    public function setName($name): void
     {
         $this->name = $name;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getSurname(): string
+    public function getSurname()
     {
         return $this->surname;
     }
 
     /**
-     * @param string $surname
+     * @param mixed $surname
      */
-    public function setSurname(string $surname)
+    public function setSurname($surname): void
     {
         $this->surname = $surname;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUserName()
+    {
+        return $this->userName;
+    }
+
+    /**
+     * @param mixed $userName
+     */
+    public function setUserName($userName): void
+    {
+        $this->userName = $userName;
+    }
+
+
+
 }

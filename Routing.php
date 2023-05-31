@@ -2,6 +2,7 @@
 
 require_once 'src/controller/DefaultController.php';
 require_once 'src/controller/AuthController.php';
+require_once 'src/controller/RegisterController.php';
 class Routing
 {
     public static $routes;
