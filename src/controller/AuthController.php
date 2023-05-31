@@ -25,6 +25,7 @@ class AuthController extends BaseController
                 return $this->render('login', ['messages'=>['Wrong password!']]);
             }
 
+            setcookie("user", $user->getUserId(), time()+(86400 * 30), "/");
             return $this->render('flashcards');
         } else {
             return $this->render('login');

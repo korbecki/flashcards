@@ -7,9 +7,11 @@ class DefaultController extends BaseController {
         $this -> render('login');
     }
 
-        public function flashcards()
+    public function flashcards()
     {
+        if (!isset($_COOKIE['user'])) {
+            $this -> render('login');
+        }
         $this -> render('flashcards');
-
     }
 }
