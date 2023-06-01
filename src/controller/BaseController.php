@@ -8,6 +8,11 @@ class BaseController {
         $this->request = $_SERVER['REQUEST_METHOD'];
     }
 
+    protected function getUserId()
+    {
+        return $_COOKIE['user'];
+    }
+
     protected function isPost(): bool
     {
         return $this->request === 'POST';

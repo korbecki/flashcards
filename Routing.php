@@ -3,6 +3,7 @@
 require_once 'src/controller/DefaultController.php';
 require_once 'src/controller/AuthController.php';
 require_once 'src/controller/RegisterController.php';
+require_once 'src/controller/AddFlashcardsController.php';
 class Routing
 {
     public static $routes;

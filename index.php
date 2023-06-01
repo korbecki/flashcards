@@ -9,4 +9,5 @@ Routing::get('index', 'DefaultController');
 Routing::get('flashcards', 'DefaultController');
 Routing::post('login', 'AuthController');
 Routing::post('register', 'RegisterController');
+Routing::post('addFlashcards', 'AddFlashcardsController');
 Routing::run($path);
