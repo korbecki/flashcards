@@ -3,6 +3,7 @@ html {
     height: 100%;
 }
 
+
 body {
     margin: 0;
     background-image: url("cool-background.svg");
@@ -11,24 +12,27 @@ body {
     background-size: cover;
 }
 
-header{
+header {
     display: inline-flex;
     justify-content: start;
 }
-header>ul{
+
+header > ul {
     padding: 0;
     margin: 0;
     width: 20%;
 }
-header li{
+
+header li {
     padding: 0;
     margin: 0;
 }
 
-main{
-    width: 100% ;
+main {
+    width: 100%;
 }
-#base-container{
+
+#base-container {
     width: 100%;
 }
 
@@ -63,7 +67,8 @@ input {
     margin: 1em;
     width: 50%;
 }
-.base-container{
+
+.base-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -71,35 +76,35 @@ input {
 
 }
 
-
-
 nav > img {
     width: 90%;
     margin: 2em auto;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     height: 100vh;
+
 }
 
-a{
+a {
     text-decoration: none;
     display: inline-block;
     line-height: 2em;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
-    border-bottom: 1px solid gray;/
+    border-bottom: 1px solid gray;
+
 }
 
 .add-project {
-    background: #2E6CD3 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
+    background: #2E6CD3 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
     border-radius: 1.5em;
     color: white;
     letter-spacing: 0.1em;
@@ -107,7 +112,7 @@ header{
     width: 20%;
 }
 
-.add-project>i {
+.add-project > i {
     padding: 1em 1em;
 }
 
@@ -115,7 +120,7 @@ header{
     width: 40%;
 }
 
-.search-bar>form>input {
+.search-bar > form > input {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #707070;
@@ -133,21 +138,29 @@ li i {
 }
 
 section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2em;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*grid-gap: 2em;*/
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
     padding: 2em;
-    overflow: auto;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    /*overflow: auto;*/
+    background: rgba(255, 255, 255, .75) 0 0 no-repeat padding-box
 }
 
-.flashcards>div>img {
+.flashcards > div > img {
     height: 50%;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
 }
 
-.flashcards>div>div {
+.flashcards > div > div {
     height: 50%;
     margin: 1em;
     color: #2699FB;
@@ -156,7 +169,7 @@ section {
     justify-content: space-around;
 }
 
-.flashcards>div {
+.flashcards > div {
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
     height: 400px;
@@ -180,32 +193,27 @@ section {
     color: white;
 }
 
-header{
+header {
     display: inline-flex;
     justify-content: start;
 }
-header>ul{
+
+header > ul {
     padding: 0;
     margin: 0;
     width: 20%;
 }
-header li{
+
+header li {
     padding: 0;
     margin: 0;
 }
 
-/*test*/
-/*.add-flashcards-section form {*/
-/*    display: table-row;*/
-/*    grid-template-columns: 2fr;*/
+/*.add-flashcards-section {*/
+/*    display: grid;*/
+/*    grid-template-columns: 2fr 2fr;*/
 /*    grid-gap: 1em;*/
 /*}*/
-
-.add-flashcards-section {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 1em;
-}
 
 .add-flashcards-section input[type="text"] {
     background-color: transparent;
@@ -235,5 +243,5 @@ header li{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
-    /*overflow: auto;*/
 }
+

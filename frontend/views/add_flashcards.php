@@ -53,10 +53,17 @@
             </div>
         </header>
         <section class="add-flashcards-section">
-            <form action="addFlashcards" method="POST">
+            <form class="add-flashcards-form" action="addFlashcards" method="POST" enctype="multipart/form-data">
+                <?php if(isset($messages)){
+                    foreach ($messages as $message) {
+                        echo $message;
+                    }
+                }?>
                 <div id="formMainData">
                     <input type="text" placeholder="Flashcards Name" name="name">
-                    <input type="text" placeholder="Flashcards Description" name="description">
+<!--                    <input type="text" placeholder="Flashcards Description" name="description">-->
+                    <textarea name="description" rows = "3" placeholder="Description"></textarea>
+                    <label>Upload icon<input type="file" name="file" placeholder=""></label>
                 </div>
                 <div id="inputContainer">
                     <input type="text" placeholder="Question" name="question1">
