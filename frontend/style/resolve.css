@@ -215,7 +215,7 @@ header li {
 /*    grid-gap: 1em;*/
 /*}*/
 
-.add-flashcards-section input[type="text"] {
+.resolve-section input[type="text"] {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid gray;
@@ -224,7 +224,7 @@ header li {
     width: 100%;
 }
 
-.add-flashcards-section button {
+.resolve-section button {
     background: transparent linear-gradient(180deg, #3D8EF3 0%, #225189 100%) 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     border-radius: 19px;
@@ -235,7 +235,7 @@ header li {
     width: 100%;
 }
 
-.add-flashcards-section .inputContainer:last-child {
+.resolve-section .inputContainer:last-child {
     margin-bottom: 0;
 }
 
