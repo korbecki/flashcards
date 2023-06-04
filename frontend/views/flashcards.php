@@ -31,8 +31,10 @@
             <?php
                 foreach ($flashcards as $flashcard):
             ?>
-            <div id="project-1">
-                <img src="frontend/images/upload/<?=$flashcard->getIcon(); ?>">
+
+            <div id="project-1" onclick="showMsg(<?=$flashcard->getFlashcardId(); ?>)">
+                <img src="frontend/images/upload/<?=$flashcard->getIcon(); ?>" >
+
                 <div>
                     <h2><?=$flashcard->getName(); ?></h2>
                     <p><?=$flashcard->getDescription(); ?></p>
@@ -40,12 +42,19 @@
                         <i class="fas fa-heart"> <?=$flashcard->getPagesCount(); ?></i>
                     </div>
                 </div>
+
             </div>
+
             <?php endforeach;?>
         </section>
     </main>
 
 </div>
+<script type="application/javascript">
+    function showMsg(item) {
+        window.location.href = "http://localhost:8080/resolve?id="+item;
+    }
+</script>
 </body>
 </html>
 

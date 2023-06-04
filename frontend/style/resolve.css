@@ -137,47 +137,6 @@ li i {
     font-size: 1.5em;
 }
 
-section {
-    /*display: grid;*/
-    /*grid-template-columns: repeat(4, 1fr);*/
-    /*grid-gap: 2em;*/
-    display: flex;
-    flex-direction: inherit;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    margin-top: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    /*overflow: auto;*/
-    background: rgba(255, 255, 255, .75) 0 0 no-repeat padding-box
-}
-
-.flashcards > div > img {
-    height: 50%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1em 1em 0 0;
-}
-
-.flashcards > div > div {
-    height: 50%;
-    margin: 1em;
-    color: #2699FB;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.flashcards > div {
-    border: 1px solid gray;
-    border-radius: 1em 1em 0 0;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .add-flashcards {
     border: 2px solid white;
     border-radius: 50%;
@@ -209,39 +168,96 @@ header li {
     margin: 0;
 }
 
-/*.add-flashcards-section {*/
-/*    display: grid;*/
-/*    grid-template-columns: 2fr 2fr;*/
-/*    grid-gap: 1em;*/
-/*}*/
-
-.resolve-section input[type="text"] {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid gray;
-    padding: 1em;
-    margin: 1em;
-    width: 100%;
-}
-
-.resolve-section button {
-    background: transparent linear-gradient(180deg, #3D8EF3 0%, #225189 100%) 0 0 no-repeat padding-box;
-    box-shadow: 0 3px 6px #00000029;
-    border-radius: 19px;
-    border: none;
-    color: white;
-    margin: 1em;
-    line-height: 2.5em;
-    width: 100%;
-}
-
-.resolve-section .inputContainer:last-child {
-    margin-bottom: 0;
-}
-
 #formMainData {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
 }
+
+
+.flashcard {
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    text-align: center;
+    perspective: 1000px;
+    position: relative;
+}
+
+.flashcard .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard .card-front,
+.flashcard .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flashcard .card-front {
+    background-color: #ffffff;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.flashcard .card-back {
+    background-color: #FFFFFF;
+    transform: rotateY(180deg);
+}
+
+.flashcard .question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flashcard .answer {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.flashcard .answer input[type="text"] {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
+
+.flashcard .actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.flashcard .actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3D8EF3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.flashcard.correct  {
+    background-color: #a3ffa3;
+}
+
+.flashcard.wrong  {
+    background-color: #ff8e8e;
+}
+
+
 

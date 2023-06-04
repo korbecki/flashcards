@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="frontend/style/add_flashcards.css" rel="stylesheet" type="text/css">
+    <link href="frontend/style/resolve.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./frontend/script/resolve.js" defer></script>
+
     <meta charset="UTF-8">
     <title>Flashcards</title>
 </head>
@@ -11,30 +13,38 @@
         <header>
             <ul>
                 <li>
-                    <a href="#" class="button">Flashcards</a>
+                    <a href="http://localhost:8080/flashcards" class="button">Flashcards</a>
                 </li>
                 <li>
                     <a href="#" class="button">Friends</a>
                 </li>
             </ul>
-            <div class="search-bar">
-                <form>
-                    <input placeholder="Search flashcards">
-                </form>
-            </div>
             <div class="add-flashcards">
-                <a href="#">+</a>
+                <a href="http://localhost:8080/addFlashcards">+</a>
             </div>
         </header>
-        <section class="resolve-section">
-            <form class="resolve-form" action="addFlashcards" method="POST" enctype="multipart/form-data">
-                <p>Question</p>
-                <input>Your answer
-                <button type="submit">Save</button>
-            </form>
-        </section>
+            <div class="flashcard">
+                <div class="card-inner">
+                <?php if(isset($page)):?>
+                    <div class="card-front">
+                        <div class="question"><?=$page->getQuestion(); ?></div>
+                        <div class="answer">
+                            <input type="text" placeholder="Answer">
+                        </div>
+                        <div class="actions">
+                            <button onclick="checkAnswer()">Sprawdź</button>
+                            <button onclick="endQuiz()">Zakończ</button>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="answer"><?=$page->getAnswer(); ?></div>
+                        <div class="actions">
+                            <button onclick="nextCard()">Następna</button>
+                        </div>
+                    </div>
+                    <?php endif;?>
+                </div>
     </main>
-
 </div>
 </body>
 </html>

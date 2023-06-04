@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .flashcard {
+            width: 300px;
+            height: 200px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            text-align: center;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .flashcard .card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flashcard .card-front,
+        .flashcard .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .flashcard .card-front {
+            background-color: #ffffff;
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .flashcard .card-back {
+            background-color: #c6ffc6;
+            transform: rotateY(180deg);
+        }
+
+        .flashcard .question {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .flashcard .answer {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .flashcard .answer input[type="text"] {
+            width: 200px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .flashcard .actions {
+            margin-top: 20px;
+        }
+
+        .flashcard .actions button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3D8EF3;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .flashcard.correct .card-front {
+            background-color: #a3ffa3;
+        }
+
+        .flashcard.wrong .card-front {
+            background-color: #ff8e8e;
+        }
+
+        .flashcard.correct .card-back {
+            background-color: #a3ffa3;
+        }
+
+        .flashcard.wrong .card-back {
+            background-color: #ff8e8e;
+        }
+    </style>
+</head>
+
+<body>
+<div class="flashcard">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="question">Question</div>
+            <div class="answer">
+                <input type="text" placeholder="Answer">
+            </div>
+            <div class="actions">
+                <button onclick="checkAnswer()">Sprawdź</button>
+                <button onclick="endQuiz()">Zakończ</button>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="answer">Correct Answer</div>
+            <div class="actions">
+                <button onclick="nextCard()">Następna</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkAnswer() {
+        var flashcard = document.querySelector('.flashcard');
+        var cardInner = document.querySelector('.flashcard .card-inner');
+        var input = document.querySelector('.flashcard .card-front input[type="text"]');
+        var answer = document.querySelector('.flashcard .card-back .answer');
+
+        var correctAnswer = "Correct Answer";
+        var userAnswer = input.value;
+
+        if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+            flashcard.classList.add("correct");
+        } else {
+            flashcard.classList.add("wrong");
+        }
+
+        cardInner.style.transform = "rotateY(180deg)";
+    }
+
+    function nextCard() {
+        var flashcard = document.querySelector('.flashcard');
+        flashcard.classList.remove("correct");
+        flashcard.classList.remove("wrong");
+        var cardInner = document.querySelector('.flashcard .card-inner');
+        cardInner.style.transform = "rotateY(0deg)";
+        document.querySelector('.flashcard .card-front input[type="text"]').value = "";
+    }
+
+    function endQuiz() {
+        var flashcard = document.querySelector('.flashcard');
+        flashcard.style.display = "none";
+    }
+</script>
+</body>
+
+</html>

@@ -37,7 +37,7 @@
         <header>
             <ul>
                 <li>
-                    <a href="#" class="button">Flashcards</a>
+                    <a href="http://localhost:8080/flashcards" class="button">Flashcards</a>
                 </li>
                 <li>
                     <a href="#" class="button">Friends</a>
