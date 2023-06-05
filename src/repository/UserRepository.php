@@ -15,7 +15,7 @@ class UserRepository extends Repository
 
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-        if ($user == false) {
+        if (!$user) {
             return null;
         }
 
