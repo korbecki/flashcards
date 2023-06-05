@@ -2,17 +2,22 @@ package com.github.korbecki.mail.entity;
 
 import com.github.korbecki.mail.enums.ActivateStatus;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Entity(name = "ACTIVATE")
-@Table
+@Entity(name = "activate")
+@Table(name = "activate")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ActivateEntity {
 
     @Id
     @Column(name = "activate_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long activateId;
 
     @Column(name = "is_activated")
@@ -22,7 +27,6 @@ public class ActivateEntity {
     private String code;
 
     @Column(name = "status")
-    @Enumerated(EnumType.ORDINAL)
     private ActivateStatus status;
 
     @Column(name = "expired_at")
