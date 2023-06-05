@@ -33,7 +33,6 @@ class UserRepository extends Repository
     {
         $statement = $this->database->connect()->prepare('
             SELECT * FROM system_user WHERE user_name = :userName');
-        $email = $user->getEmail();
         $userName = $user->getUserName();
         $statement->bindParam(':userName', $userName);
 

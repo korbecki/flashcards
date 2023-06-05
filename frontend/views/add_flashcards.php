@@ -61,7 +61,6 @@
                 }?>
                 <div id="formMainData">
                     <input type="text" placeholder="Flashcards Name" name="name">
-<!--                    <input type="text" placeholder="Flashcards Description" name="description">-->
                     <textarea name="description" rows = "3" placeholder="Description"></textarea>
                     <label>Upload icon<input type="file" name="file" placeholder=""></label>
                 </div>

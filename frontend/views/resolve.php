@@ -26,6 +26,7 @@
             <div class="flashcard">
                 <div class="card-inner">
                 <?php if(isset($page)):?>
+                <p style="visibility: hidden" class="pageId"><?=$page->getPageId(); ?></p>
                     <div class="card-front">
                         <div class="question"><?=$page->getQuestion(); ?></div>
                         <div class="answer">

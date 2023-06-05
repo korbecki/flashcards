@@ -24,7 +24,7 @@
                 <input placeholder="Search flashcards">
             </div>
             <div class="add-flashcards">
-                <a href="#">+</a>
+                <a href="http://localhost:8080/addFlashcards">+</a>
             </div>
         </header>
         <section class="flashcards">
@@ -32,7 +32,7 @@
                 foreach ($flashcards as $flashcard):
             ?>
 
-            <div id="project-1" onclick="showMsg(<?=$flashcard->getFlashcardId(); ?>)">
+            <div id="project-1" onclick="redirect(<?=$flashcard->getFlashcardId(); ?>)">
                 <img src="frontend/images/upload/<?=$flashcard->getIcon(); ?>" >
 
                 <div>
@@ -50,11 +50,6 @@
     </main>
 
 </div>
-<script type="application/javascript">
-    function showMsg(item) {
-        window.location.href = "http://localhost:8080/resolve?id="+item;
-    }
-</script>
 </body>
 </html>
 

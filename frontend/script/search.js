@@ -43,3 +43,7 @@ function createFlashcard(flashcard) {
 
     projectContainer.appendChild(clone);
 }
+
+function redirect(item) {
+    window.location.href = "http://localhost:8080/resolve?id="+item;
+}

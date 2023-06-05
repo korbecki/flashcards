@@ -26,7 +26,8 @@ class AuthController extends BaseController
             }
 
             setcookie("user", $user->getUserId(), time()+(86400 * 30), "/");
-            return $this->render('flashcards');
+            $flashcardController = new FlashcardsController();
+            return $flashcardController->flashcards();
         } else {
             return $this->render('login');
         }

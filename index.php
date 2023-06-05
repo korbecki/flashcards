@@ -12,4 +12,6 @@ Routing::post('register', 'RegisterController');
 Routing::post('addFlashcards', 'FlashcardsController');
 Routing::post('search', 'FlashcardsController');
 Routing::post('resolve', 'ResolveController');
+Routing::post('saveAttempt', 'ResolveController');
+Routing::post('getNextPage', 'ResolveController');
 Routing::run($path);
