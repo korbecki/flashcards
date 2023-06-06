@@ -12,7 +12,7 @@
     </div>
     <div class="login-container">\
         <form class="login">
-            <h2>Your email address has been verified correctly! Now you can <a href="http://localhost:8080/login">LOG IN</a></h2>
+            <p>Your email address has been verified correctly! Now you can <a href="http://localhost:8080/login">LOG IN</a></p>
         </form>
     </div>
 </div>

@@ -17,6 +17,12 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - .:/app
+  mail:
+    build:
+      context: ./mail
+      dockerfile: mail/Dockerfile
+    volumes:
+      - .:/app
   db:
     container_name: pg_container
     image: postgres

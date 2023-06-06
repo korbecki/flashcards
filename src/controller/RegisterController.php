@@ -29,7 +29,7 @@ class RegisterController extends BaseController
             }
 
             $userRepository->saveUser($user);
-            return $this->render('login', ['messages'=>['Registered successfully!']]);
+            return $this->render('activate', ['messages'=>['Registered successfully!', 'Now confirm your email!']]);
 
         } else {
             return $this->render('register');

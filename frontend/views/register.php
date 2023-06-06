@@ -19,11 +19,11 @@
                     }
                 }?>
             </div>
+            <input name="name" placeholder="Name" type="text">
+            <input name="surname" placeholder="Surname" type="text">
+            <input name="user_name" placeholder="User name" type="text">
             <input name="email" placeholder="your@email.com" type="text">
             <input name="password" placeholder="password" type="password">
-            <input name="user_name" placeholder="User name" type="text">
-            <input name="surname" placeholder="Surname" type="text">
-            <input name="name" placeholder="Name" type="text">
 
             <button type="submit">Register</button>
         </form>

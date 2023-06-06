@@ -21,6 +21,7 @@
             </div>
             <input name="email" placeholder="your@email.com" type="text">
             <input name="password" placeholder="password" type="password">
+            <p>You don't have an account? Register <a href="http://localhost:8080/register">here</a></p>
             <button type="submit">LOGIN</button>
         </form>
     </div>
