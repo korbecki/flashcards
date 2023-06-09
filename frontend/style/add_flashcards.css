@@ -12,6 +12,24 @@ body {
     background-size: cover;
 }
 
+ul{
+    list-style-type: none;
+    color: white;
+    font: normal normal normal 20px/27px "Segoe UI";
+    letter-spacing: 1px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 30%;
+    position: relative;
+}
+
+li{
+    float: left;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
 header {
     display: inline-flex;
     justify-content: start;
@@ -256,3 +274,5 @@ header li {
     }
 
 }
+
+
