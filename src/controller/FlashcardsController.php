@@ -48,7 +48,7 @@ class FlashcardsController extends BaseController
             }
             $repository = new FlashcardRepository();
             $repository->saveFlashcard($flashcard, $pages);
-            return $this->render('flashcards');
+            return $this->flashcards();
         }
         return $this->render('add_flashcards');
 

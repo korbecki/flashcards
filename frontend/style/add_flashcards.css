@@ -209,12 +209,6 @@ header li {
     margin: 0;
 }
 
-/*.add-flashcards-section {*/
-/*    display: grid;*/
-/*    grid-template-columns: 2fr 2fr;*/
-/*    grid-gap: 1em;*/
-/*}*/
-
 .add-flashcards-section input[type="text"] {
     background-color: transparent;
     border: none;
@@ -245,3 +239,20 @@ header li {
     grid-gap: 2em;
 }
 
+@media only screen and (max-device-width: 800px) {
+    #formMainData {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+    }
+
+    section {
+        width: 100%;
+        font-size: 150%;
+    }
+
+    ::placeholder {
+        font-size: 150%;
+    }
+
+}

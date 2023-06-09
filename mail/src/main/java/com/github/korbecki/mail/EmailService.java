@@ -40,7 +40,7 @@ public class EmailService {
 
 
     @Transactional
-    @Scheduled(fixedDelay = 30_000, initialDelay = 1000)
+    @Scheduled(fixedDelay = 5_000, initialDelay = 1000)
     public void execute() {
         List<UserEntity> userEntityList = userRepository.getAllToMailSend();
 

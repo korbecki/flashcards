@@ -6,6 +6,7 @@
 
     <include file="changelog/schema/202305082020_user_table.xml"/>
     <include file="changelog/schema/202305082137_flashcards.xml"/>
+    <include file="/changelog/schema/202306041017_role_table.xml"/>
     <include file="changelog/schema/202306051158_activate_user.xml"/>
 
 

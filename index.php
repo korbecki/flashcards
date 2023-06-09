@@ -15,4 +15,5 @@ Routing::post('resolve', 'ResolveController');
 Routing::post('saveAttempt', 'ResolveController');
 Routing::post('getNextPage', 'ResolveController');
 Routing::post('activate', 'ActivateController');
+Routing::post('activateAgain', 'ActivateController');
 Routing::run($path);

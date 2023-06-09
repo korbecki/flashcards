@@ -11,7 +11,7 @@
         <img alt="Logo image" src="frontend/images/logo.svg">
     </div>
     <div class="login-container">
-        <form class="login" action="activate" method="POST">
+        <form class="login" action="activateAgain" method="POST">
             <div class="message">
                 <?php if(isset($messages)){
                     foreach ($messages as $message) {
@@ -20,9 +20,7 @@
                 }?>
             </div>
             <input name="email" placeholder="your@email.com" type="text">
-            <input name="code" placeholder="ABCDEF" type="text">
-            <button type="submit">ACTIVATE</button>
-            <p>You don't received e-mail? <a href="http://localhost:8080/activateAgain">Send email again</a></p>
+            <button type="submit">SEND EMAIL</button>
         </form>
     </div>
 </div>

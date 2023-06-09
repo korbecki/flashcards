@@ -14,7 +14,7 @@
         <header>
             <ul>
                 <li>
-                    <a href="#" class="button">Flashcards</a>
+                    <a href="http://localhost:8080/flashcards" class="button">Flashcards</a>
                 </li>
                 <li>
                     <a href="#" class="button">Friends</a>
@@ -34,12 +34,11 @@
 
             <div id="project-1" onclick="redirect(<?=$flashcard->getFlashcardId(); ?>)">
                 <img src="frontend/images/upload/<?=$flashcard->getIcon(); ?>" >
-
                 <div>
                     <h2><?=$flashcard->getName(); ?></h2>
                     <p><?=$flashcard->getDescription(); ?></p>
                     <div class="social-section">
-                        <i class="fas fa-heart"> <?=$flashcard->getPagesCount(); ?></i>
+                        <a>flashcards <?=$flashcard->getPagesCount(); ?></a>
                     </div>
                 </div>
 
@@ -60,7 +59,7 @@
             <h2>name</h2>
             <p>description</p>
             <div class="social-section">
-                <i class="fas fa-heart">0</i>
+                <a id="count">flashcards <?=$flashcard->getPagesCount(); ?></a>
             </div>
         </div>
     </div>

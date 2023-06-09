@@ -32,4 +32,24 @@ class ActivateController extends BaseController
         return $this->render('activate');
 
     }
+
+    public function activateAgain()
+    {
+        if ($this->isPost()) {
+            $email = $_POST["email"];
+
+            $repository = new ActivateRepository();
+
+            $user = $repository->userExists($email);
+
+            if (!$user) {
+                return $this->render('activate_again', ['messages'=>['User with this email not exists or account is activated!']]);
+            }
+            $repository->sendEmail($email);
+            return $this->render('activate_again', ['messages'=>['Email was sent! Check your mailbox']]);
+
+        }
+        return $this->render('activate_again');
+
+    }
 }

@@ -33,13 +33,13 @@ function createFlashcard(flashcard) {
     const clone = template.content.cloneNode(true);
 
     const image = clone.querySelector("img");
-    image.src = `/frontend/images/upload/${flashcard.image}`;
+    image.src = `/frontend/images/upload/${flashcard.icon}`;
     const title = clone.querySelector("h2");
     title.innerHTML = flashcard.name;
     const description = clone.querySelector("p");
     description.innerHTML = flashcard.description;
-    const pages = clone.querySelector(".fa-heart");
-    pages.innerText = flashcard.pagesCount;
+    const pages = clone.querySelector("a");
+    pages.innerText = 'flashcards ' + flashcard.pages_count;
 
     projectContainer.appendChild(clone);
 }
