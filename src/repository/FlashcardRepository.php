@@ -53,9 +53,23 @@ class FlashcardRepository extends Repository
             SELECT flashcard_id, name, description, icon, is_public, created_by, created_at,
                 (SELECT COUNT(*) from page as p where p.flashcard_id=flashcard.flashcard_id) AS pages_count
             FROM flashcard
-            WHERE created_by = :userId;');
+            WHERE created_by = :userId');
 
         $statement->bindParam(':userId', $userId);
+        $statement->execute();
+        $flashcards = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $this->createFlashcardsArrayFromDB($flashcards);
+    }
+
+    public function getPublicFlashcards(): array
+    {
+        $statement = $this->database->connect()->prepare('
+            SELECT flashcard_id, name, description, icon, is_public, created_by, created_at,
+                (SELECT COUNT(*) from page as p where p.flashcard_id=flashcard.flashcard_id) AS pages_count
+            FROM flashcard
+            WHERE is_public = true;');
+
         $statement->execute();
         $flashcards = $statement->fetchAll(PDO::FETCH_ASSOC);
 

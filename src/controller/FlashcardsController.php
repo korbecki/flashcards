@@ -63,7 +63,7 @@ class FlashcardsController extends BaseController
         $repository = new FlashcardRepository();
         $flashcards = $repository->getFlashcardsByUserId($this->getUserId());
 
-        $this -> render('flashcards', ['flashcards' => $flashcards]);
+        $this -> render('flashcards', ['my_flashcards' => $flashcards]);
     }
 
     public function search()

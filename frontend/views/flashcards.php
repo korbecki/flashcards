@@ -28,8 +28,9 @@
             </div>
         </header>
         <section class="flashcards">
+
             <?php
-                foreach ($flashcards as $flashcard):
+                foreach ($my_flashcards as $flashcard):
             ?>
 
             <div id="project-1" onclick="redirect(<?=$flashcard->getFlashcardId(); ?>)">
@@ -45,6 +46,7 @@
             </div>
 
             <?php endforeach;?>
+
         </section>
     </main>
 
