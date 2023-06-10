@@ -1,7 +1,7 @@
 const search = document.querySelector('input[placeholder="Search flashcards"]');
 const projectContainer = document.querySelector('.flashcards');
 
-search.addEventListener("keyup", function (event){
+search.addEventListener("keyup", function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();
 
@@ -45,5 +45,5 @@ function createFlashcard(flashcard) {
 }
 
 function redirect(item) {
-    window.location.href = "http://localhost:8080/resolve?id="+item;
+    window.location.href = "http://localhost:8080/resolve?id=" + item;
 }

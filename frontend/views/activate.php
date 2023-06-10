@@ -13,11 +13,11 @@
     <div class="login-container">
         <form class="login" action="activate" method="POST">
             <div class="message">
-                <?php if(isset($messages)){
+                <?php if (isset($messages)) {
                     foreach ($messages as $message) {
                         echo $message;
                     }
-                }?>
+                } ?>
             </div>
             <input name="email" placeholder="your@email.com" type="text">
             <input name="code" placeholder="ABCDEF" type="text">

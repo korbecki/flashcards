@@ -38,4 +38,11 @@ class AuthController extends BaseController
             return $this->render('login');
         }
     }
+
+    public function logout()
+    {
+        unset($_COOKIE['user']);
+        setcookie('user', '', time() - 3600);
+        return $this->login();
+    }
 }

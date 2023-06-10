@@ -251,11 +251,11 @@ header li {
     margin-right: 10px;
 }
 
-.flashcard.correct  {
+.flashcard.correct {
     background-color: #a3ffa3;
 }
 
-.flashcard.wrong  {
+.flashcard.wrong {
     background-color: #ff8e8e;
 }
 

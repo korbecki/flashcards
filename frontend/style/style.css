@@ -40,7 +40,7 @@ form.login {
     width: 100%;
     height: 100%;
 
-    background:  rgba(255, 255, 255, .75) 0 0 no-repeat padding-box;
+    background: rgba(255, 255, 255, .75) 0 0 no-repeat padding-box;
     box-shadow: 0 6px 6px #00000029;
     border: 1px solid #707070;
     border-radius: 10% 0 0 10%;
@@ -64,7 +64,7 @@ input {
     border-bottom: 1px solid gray;
     padding: 1em;
     margin: 1em;
-    width: 50%;
+    width: 90%;
 }
 
 @media only screen and (max-device-width: 420px) {
@@ -92,14 +92,14 @@ input {
         width: 100%;
         height: 100%;
 
-        background:  rgba(255, 255, 255, .75) 0 0 no-repeat padding-box;
+        background: rgba(255, 255, 255, .75) 0 0 no-repeat padding-box;
         box-shadow: 0 6px 6px #00000029;
         border: 1px solid #707070;
         border-radius: 10% 10% 0 0;
     }
 }
 
-.base-container{
+.base-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -117,7 +117,7 @@ nav > img {
     margin: 2em auto;
 }
 
-a{
+a {
     text-decoration: none;
     display: inline-block;
     line-height: 2em;
@@ -138,7 +138,7 @@ li i {
     width: 80%;
 }
 
-ul{
+ul {
     list-style-type: none;
     color: white;
     font: normal normal normal 20px/27px "Segoe UI";
@@ -150,56 +150,22 @@ ul{
     position: relative;
 }
 
-li{
+li {
     float: left;
     text-align: left;
     margin-bottom: 1em;
 }
 
-.fa, .fas{
-    width: 1em;
-}
-
-main{
+main {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
-    border-bottom: 1px solid gray;/
-}
-
-.add-project {
-    background: #2E6CD3 0 0 no-repeat padding-box;
-    box-shadow: 0 3px 6px #00000029;
-    border-radius: 1.5em;
-    color: white;
-    letter-spacing: 0.1em;
-    text-align: center;
-    width: 20%;
-}
-
-.add-project>i {
-    padding: 1em 1em;
-}
-
-.search-bar {
-    width: 40%;
-}
-
-.search-bar>input {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #707070;
-    border-radius: 23px;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 0.72px;
-    color: #A8A8A8;
-    margin: 0;
-    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+/
 }

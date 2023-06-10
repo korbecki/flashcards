@@ -8,6 +8,7 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('index', 'DefaultController');
 Routing::get('flashcards', 'FlashcardsController');
 Routing::post('login', 'AuthController');
+Routing::post('logout', 'AuthController');
 Routing::post('register', 'RegisterController');
 Routing::post('addFlashcards', 'FlashcardsController');
 Routing::post('search', 'FlashcardsController');

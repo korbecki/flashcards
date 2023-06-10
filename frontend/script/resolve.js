@@ -22,8 +22,9 @@ function checkAnswer() {
 
     const data = {
         pageId: pageId,
-        isCorrect : isCorrect,
-        answer: userAnswer};
+        isCorrect: isCorrect,
+        answer: userAnswer
+    };
 
     fetch("/saveAttempt", {
         method: "POST",
@@ -45,7 +46,8 @@ function nextCard() {
     var answer = document.querySelector('.flashcard .card-back .answer');
 
     const data = {
-        pageId: pageId};
+        pageId: pageId
+    };
 
     fetch("/getNextPage", {
         method: "POST",
@@ -53,7 +55,7 @@ function nextCard() {
         body: JSON.stringify(data)
     }).then(function (response) {
         return response.json();
-    }).then(function (page){
+    }).then(function (page) {
         pageId = page.pageId;
         question.innerHTML = page.question;
         answer.innerHTML = page.answer;

@@ -13,11 +13,11 @@
     <div class="login-container">
         <form class="login" action="activateAgain" method="POST">
             <div class="message">
-                <?php if(isset($messages)){
+                <?php if (isset($messages)) {
                     foreach ($messages as $message) {
                         echo $message;
                     }
-                }?>
+                } ?>
             </div>
             <input name="email" placeholder="your@email.com" type="text">
             <button type="submit">SEND EMAIL</button>

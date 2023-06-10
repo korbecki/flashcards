@@ -1,0 +1,116 @@
+.search-bar {
+    width: 40%;
+}
+
+.search-bar > input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #A8A8A8;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.add-flashcards {
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 50px;
+    align-content: center;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.add-flashcards > a {
+    color: white;
+}
+
+.logout-button {
+    border: 1px solid white;
+    border-radius: 1em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0.2em;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.dropbtn {
+    color: white;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 10%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+@media only screen and (max-device-width: 800px) {
+    .dropbtn {
+        color: white;
+        border: none;
+        width: 100%;
+        margin: auto;
+        font-size: 50px;
+    }
+
+    .logout-button {
+        border: 1px solid white;
+        border-radius: 1em;
+        text-align: center;
+        letter-spacing: 1px;
+        color: white;
+        margin: auto;
+        font-size: 50px;
+    }
+
+    .search-bar {
+        width: 40%;
+        margin: auto;
+    }
+}

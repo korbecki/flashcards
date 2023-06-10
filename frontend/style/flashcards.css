@@ -36,14 +36,14 @@ section {
     }
 }
 
-.flashcards>div>img {
+.flashcards > div > img {
     height: 50%;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
 }
 
-.flashcards>div>div {
+.flashcards > div > div {
     height: 50%;
     margin: 1em;
     color: #2699FB;
@@ -52,7 +52,7 @@ section {
     justify-content: space-around;
 }
 
-.flashcards>div {
+.flashcards > div {
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
     height: 400px;
@@ -61,38 +61,11 @@ section {
     justify-content: space-between;
 }
 
-.add-flashcards {
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 50px;
-    align-content: center;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+main {
+    width: 100%;
 }
 
-.add-flashcards > a {
-   color: white;
-}
-
-header{
-    display: inline-flex;
-    justify-content: start;
-}
-header>ul{
-    padding: 0;
-    margin: 0;
-    width: 20%;
-}
-header li{
-    padding: 0;
-    margin: 0;
-}
-
-main{
-    width: 100% ;
-}
-#base-container{
+#base-container {
     width: 100%;
 }

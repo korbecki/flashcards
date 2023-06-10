@@ -23,12 +23,12 @@
                 <a href="http://localhost:8080/addFlashcards">+</a>
             </div>
         </header>
-            <div class="flashcard">
-                <div class="card-inner">
-                <?php if(isset($page)):?>
-                <p style="visibility: hidden" class="pageId"><?=$page->getPageId(); ?></p>
+        <div class="flashcard">
+            <div class="card-inner">
+                <?php if (isset($page)): ?>
+                    <p style="visibility: hidden" class="pageId"><?= $page->getPageId(); ?></p>
                     <div class="card-front">
-                        <div class="question"><?=$page->getQuestion(); ?></div>
+                        <div class="question"><?= $page->getQuestion(); ?></div>
                         <div class="answer">
                             <input type="text" placeholder="Answer">
                         </div>
@@ -38,13 +38,13 @@
                         </div>
                     </div>
                     <div class="card-back">
-                        <div class="answer"><?=$page->getAnswer(); ?></div>
+                        <div class="answer"><?= $page->getAnswer(); ?></div>
                         <div class="actions">
                             <button onclick="nextCard()">Następna</button>
                         </div>
                     </div>
-                    <?php endif;?>
-                </div>
+                <?php endif; ?>
+            </div>
     </main>
 </div>
 </body>

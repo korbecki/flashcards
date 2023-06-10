@@ -12,39 +12,11 @@ body {
     background-size: cover;
 }
 
-ul{
-    list-style-type: none;
-    color: white;
-    font: normal normal normal 20px/27px "Segoe UI";
-    letter-spacing: 1px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    width: 30%;
-    position: relative;
-}
-
-li{
-    float: left;
-    text-align: left;
-    margin-bottom: 1em;
-}
-
 header {
     display: inline-flex;
     justify-content: start;
 }
 
-header > ul {
-    padding: 0;
-    margin: 0;
-    width: 20%;
-}
-
-header li {
-    padding: 0;
-    margin: 0;
-}
 
 main {
     width: 100%;
@@ -83,7 +55,7 @@ input {
     border-bottom: 1px solid gray;
     padding: 1em;
     margin: 1em;
-    width: 50%;
+    width: 90%;
 }
 
 .base-container {
@@ -120,45 +92,11 @@ header {
 
 }
 
-.add-project {
-    background: #2E6CD3 0 0 no-repeat padding-box;
-    box-shadow: 0 3px 6px #00000029;
-    border-radius: 1.5em;
-    color: white;
-    letter-spacing: 0.1em;
-    text-align: center;
-    width: 20%;
-}
-
-.add-project > i {
-    padding: 1em 1em;
-}
-
-.search-bar {
-    width: 40%;
-}
-
-.search-bar > input {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #707070;
-    border-radius: 23px;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 0.72px;
-    color: #A8A8A8;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 li i {
     font-size: 1.5em;
 }
 
 section {
-    /*display: grid;*/
-    /*grid-template-columns: repeat(4, 1fr);*/
-    /*grid-gap: 2em;*/
     display: flex;
     flex-direction: inherit;
     justify-content: center;
@@ -167,7 +105,6 @@ section {
     margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
-    /*overflow: auto;*/
     background: rgba(255, 255, 255, .75) 0 0 no-repeat padding-box
 }
 
@@ -194,21 +131,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.add-flashcards {
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 50px;
-    align-content: center;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add-flashcards > a {
-    color: white;
 }
 
 header {

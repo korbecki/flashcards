@@ -50,10 +50,10 @@ class FlashcardRepository extends Repository
     public function getFlashcardsByUserId($userId): array
     {
         $statement = $this->database->connect()->prepare('
-            SELECT flashcard_id, name, description, icon, is_public, created_by, created_at,
+            SELECT DISTINCT flashcard_id, name, description, icon, is_public, created_by, created_at,
                 (SELECT COUNT(*) from page as p where p.flashcard_id=flashcard.flashcard_id) AS pages_count
             FROM flashcard
-            WHERE created_by = :userId');
+            WHERE created_by = :userId OR is_public=true');
 
         $statement->bindParam(':userId', $userId);
         $statement->execute();
