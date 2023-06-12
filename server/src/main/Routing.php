@@ -1,11 +1,11 @@
 <?php
 
-require_once 'src/controller/DefaultController.php';
-require_once 'src/controller/AuthController.php';
-require_once 'src/controller/RegisterController.php';
-require_once 'src/controller/FlashcardsController.php';
-require_once 'src/controller/ResolveController.php';
-require_once 'src/controller/ActivateController.php';
+require_once 'controller/DefaultController.php';
+require_once 'controller/AuthController.php';
+require_once 'controller/RegisterController.php';
+require_once 'controller/FlashcardsController.php';
+require_once 'controller/ResolveController.php';
+require_once 'controller/ActivateController.php';
 class Routing
 {
     public static $routes;

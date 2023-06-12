@@ -1,7 +1,5 @@
 <?php
 
-namespace model;
-
 class Page
 {
     private $pageId;

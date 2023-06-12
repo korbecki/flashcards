@@ -1,11 +1,9 @@
 <?php
 
-use model\User;
-use dto\UserActivateDto;
-
 require_once 'Repository.php';
-require_once __DIR__.'/../model/User.php';
-require_once __DIR__.'/../dto/UserActivateDto.php';
+require_once __DIR__ . '/../model/User.php';
+require_once __DIR__ . '/../dto/UserActivateDto.php';
+
 class UserRepository extends Repository
 {
     public function getUser(string $email): ?User
@@ -60,6 +58,7 @@ class UserRepository extends Repository
 
         return !($user == false);
     }
+
     public function userEmailExists(User $user): bool
     {
         $statement = $this->database->connect()->prepare('

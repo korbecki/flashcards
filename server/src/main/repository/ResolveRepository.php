@@ -1,11 +1,9 @@
 <?php
 
-use model\Page;
-use model\Resolved;
-
 require_once 'Repository.php';
-require_once __DIR__.'/../model/Page.php';
-require_once __DIR__.'/../model/Resolved.php';
+require_once __DIR__ . '/../model/Page.php';
+require_once __DIR__ . '/../model/Resolved.php';
+
 class ResolveRepository extends Repository
 {
     public function getQuestionAndAnswerByPrevPage($userId, $prevPageId)
@@ -92,7 +90,7 @@ class ResolveRepository extends Repository
     public function save(Resolved $resolved)
     {
         $conn = $this->database->connect();
-        $sql='INSERT INTO resolved(user_id, page_id, answer, is_correct) VALUES (:userId, :pageId, :answer, :isCorrect);';
+        $sql = 'INSERT INTO resolved(user_id, page_id, answer, is_correct) VALUES (:userId, :pageId, :answer, :isCorrect);';
         $statement = $conn->prepare($sql);
 
         $userId = $resolved->getUserId();
