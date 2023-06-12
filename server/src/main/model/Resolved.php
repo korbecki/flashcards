@@ -1,7 +1,5 @@
 <?php
 
-namespace model;
-
 class Resolved
 {
     private $resolvedId;

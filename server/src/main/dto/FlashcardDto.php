@@ -1,6 +1,5 @@
 <?php
 
-namespace dto;
 
 class FlashcardDto
 {

@@ -1,9 +1,10 @@
 <?php
 
-use dto\UserDto;
+
 
 require_once 'Repository.php';
 require_once __DIR__ . '/../dto/UserDto.php';
+
 class ActivateRepository extends Repository
 {
     public function userExists($email): ?UserDto
@@ -17,7 +18,7 @@ class ActivateRepository extends Repository
         $statement->execute();
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-        if(!$user)
+        if (!$user)
             return null;
 
         return new UserDto($user['user_id'], $user['email'], $user['password'], $user['name'], $user['surname'], $user['user_name'], $user['code']);

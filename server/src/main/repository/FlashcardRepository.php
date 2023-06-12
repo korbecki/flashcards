@@ -1,13 +1,13 @@
 <?php
 
-use dto\FlashcardDto;
-use model\Flashcard;
-use model\Page;
+
+
 
 require_once 'Repository.php';
-require_once __DIR__.'/../model/Flashcard.php';
-require_once __DIR__.'/../model/Page.php';
-require_once __DIR__.'/../dto/FlashcardDto.php';
+require_once __DIR__ . '/../model/Flashcard.php';
+require_once __DIR__ . '/../model/Page.php';
+require_once __DIR__ . '/../dto/FlashcardDto.php';
+
 class FlashcardRepository extends Repository
 {
     public function saveFlashcard(Flashcard $flashcard, $page)
@@ -38,7 +38,7 @@ class FlashcardRepository extends Repository
             FROM flashcard
             WHERE created_by = :userId and LOWER(name) LIKE :name;');
 
-        $title = '%'.strtolower($title).'%';
+        $title = '%' . strtolower($title) . '%';
         $statement->bindParam(':userId', $userId);
         $statement->bindParam(':name', $title);
         $statement->execute();

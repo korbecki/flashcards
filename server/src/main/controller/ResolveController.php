@@ -1,9 +1,6 @@
 <?php
 
 
-use model\Flashcard;
-use model\Page;
-use model\Resolved;
 
 require_once 'BaseController.php';
 require_once __DIR__ . '/../model/Flashcard.php';
@@ -23,7 +20,7 @@ class ResolveController extends BaseController
         $repository = new ResolveRepository();
 
         $userId = $this->getUserId();
-        $flashcardId  = $_GET['id'];
+        $flashcardId = $_GET['id'];
 
         $page = $repository->getQuestionAndAnswer($flashcardId, $userId);
 

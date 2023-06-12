@@ -1,5 +1,7 @@
 <?php
-class BaseController {
+
+class BaseController
+{
 
     private $request;
 
@@ -25,8 +27,8 @@ class BaseController {
 
     protected function render(string $template = null, array $variables = [])
     {
-        $templatePath = 'frontend/views/'.$template.'.php';
-        $output = 'File not found';
+        $templatePath = 'resources/views/' . $template . '.php';
+        $output = 'File not foundd';
 
         if (file_exists($templatePath)) {
             extract($variables);

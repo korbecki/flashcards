@@ -1,7 +1,5 @@
 <?php
 
-namespace model;
-
 class Flashcard
 {
     private $flashcardId;

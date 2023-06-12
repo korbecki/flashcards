@@ -1,9 +1,5 @@
 <?php
 
-
-use model\Flashcard;
-use model\Page;
-
 require_once 'BaseController.php';
 require_once __DIR__ . '/../model/Flashcard.php';
 require_once __DIR__ . '/../model/Page.php';
@@ -23,8 +19,8 @@ class FlashcardsController extends BaseController
             $this->render('login');
         }
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
-            $fileName = md5(date('d-m-y h:i:s')).$_FILES['file']['name'];
-            move_uploaded_file($_FILES['file']['tmp_name'], dirname(__DIR__).self::UPLOAD_PATH.$fileName);
+            $fileName = md5(date('d-m-y h:i:s')) . $_FILES['file']['name'];
+            move_uploaded_file($_FILES['file']['tmp_name'], dirname(__DIR__) . self::UPLOAD_PATH . $fileName);
 
             $name = $_POST['name'];
             $description = $_POST['description'];
@@ -57,19 +53,19 @@ class FlashcardsController extends BaseController
     public function flashcards()
     {
         if (!isset($_COOKIE['user'])) {
-            $this -> render('login');
+            $this->render('login');
         }
 
         $repository = new FlashcardRepository();
         $flashcards = $repository->getFlashcardsByUserId($this->getUserId());
 
-        $this -> render('flashcards', ['my_flashcards' => $flashcards]);
+        $this->render('flashcards', ['my_flashcards' => $flashcards]);
     }
 
     public function search()
     {
         if (!isset($_COOKIE['user'])) {
-            $this -> render('login');
+            $this->render('login');
         }
 
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
