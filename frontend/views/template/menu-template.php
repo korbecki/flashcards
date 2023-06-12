@@ -12,7 +12,7 @@
         </form>
     </div>
     <div class="add-flashcards">
-        <a href="#">+</a>
+        <a href="http://localhost:8080/addFlashcards">+</a>
     </div>
     <a href="http://localhost:8080/logout" class="logout-button">Log out</a>
 </header>
