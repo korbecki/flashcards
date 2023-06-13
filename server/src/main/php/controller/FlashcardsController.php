@@ -10,7 +10,7 @@ class FlashcardsController extends BaseController
 {
     const MAX_FILE_SIZE = 1024 * 1024;
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
-    const UPLOAD_PATH = '/../frontend/images/upload/';
+    const UPLOAD_PATH = '/../web/images/upload/';
 
     private $messages = [];
 

@@ -8,6 +8,13 @@ require_once __DIR__ . '/../repository/UserRepository.php';
 
 class AuthController extends BaseController
 {
+    public function logout()
+    {
+        unset($_COOKIE['user']);
+        setcookie('user', '', time() - 3600);
+        return $this->login();
+    }
+
     public function login()
     {
         $userRepository = new UserRepository();
@@ -35,12 +42,5 @@ class AuthController extends BaseController
         } else {
             return $this->render('login');
         }
-    }
-
-    public function logout()
-    {
-        unset($_COOKIE['user']);
-        setcookie('user', '', time() - 3600);
-        return $this->login();
     }
 }

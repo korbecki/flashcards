@@ -18,6 +18,14 @@ Flashcards is an application for creating and solving flashcards. It has a respo
 * Docker
 * PHP
 
+## Services
+* mail
+  It's a service written in Java and the Spring framework for sending emails. The scheduler in the application checks if there are users who need to confirm an email address and sends the appropriate message with a code.
+* db
+  This is the service where changelogs for the Liquibase tool are stored
+* server
+  This is a main application written in PHP, to handle HTML views
+
 ## Getting Started
 
 1. In main application directory run command `docker-compose up`

@@ -18,11 +18,11 @@ services:
     volumes:
       - ./server/src/main:/app/
   mail:
-    build:
-      context: .
-      dockerfile: docker/mail/Dockerfile
+    build: ./mail
     volumes:
-      - ./mail:/app
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
   db:
     container_name: pg_container
     image: postgres

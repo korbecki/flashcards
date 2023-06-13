@@ -2,6 +2,4 @@ FROM maven:3.8.2-jdk-17
 
 WORKDIR /mail
 COPY . .
-RUN mvn clean install
-
-CMD mvn spring-boot:run
+RUN mvn spring-boot:run
