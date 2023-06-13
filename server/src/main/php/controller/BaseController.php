@@ -27,7 +27,7 @@ class BaseController
 
     protected function render(string $template = null, array $variables = [])
     {
-        $templatePath = 'resources/views/' . $template . '.php';
+        $templatePath = 'web/views/' . $template . '.php';
         $output = 'File not foundd';
 
         if (file_exists($templatePath)) {

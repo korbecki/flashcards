@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="frontend/style/resolve.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="./frontend/script/resolve.js" defer></script>
+    <link href="web/style/resolve.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./web/script/resolve.js" defer></script>
 
     <meta charset="UTF-8">
     <title>Flashcards</title>

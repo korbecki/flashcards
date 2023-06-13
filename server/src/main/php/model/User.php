@@ -1,7 +1,7 @@
 <?php
 
 
-class UserActivateDto
+class User
 {
     private $userId;
     private $email;
@@ -9,7 +9,6 @@ class UserActivateDto
     private $name;
     private $surname;
     private $userName;
-    private $isActivated;
 
     /**
      * @param $userId
@@ -18,9 +17,8 @@ class UserActivateDto
      * @param $name
      * @param $surname
      * @param $userName
-     * @param $isActivated
      */
-    public function __construct($userId, $email, $password, $name, $surname, $userName, $isActivated)
+    public function __construct($userId, $email, $password, $name, $surname, $userName)
     {
         $this->userId = $userId;
         $this->email = $email;
@@ -28,7 +26,6 @@ class UserActivateDto
         $this->name = $name;
         $this->surname = $surname;
         $this->userName = $userName;
-        $this->isActivated = $isActivated;
     }
 
     /**
@@ -126,23 +123,6 @@ class UserActivateDto
     {
         $this->userName = $userName;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getIsActivated()
-    {
-        return $this->isActivated;
-    }
-
-    /**
-     * @param mixed $isActivated
-     */
-    public function setIsActivated($isActivated): void
-    {
-        $this->isActivated = $isActivated;
-    }
-
 
 
 }

@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./server/src:/app/
+      - ./server/src/main:/app/
     links:
       - php
   php:
@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: docker/php/Dockerfile
     volumes:
-      - ./server/src/:/app/
+      - ./server/src/main:/app/
   mail:
     build:
       context: .
