@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="frontend/style/add_flashcards.css" rel="stylesheet" type="text/css">
-    <link href="frontend/style/menu.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="./frontend/script/add_flashcards.js" defer></script>
+    <link href="web/style/add_flashcards.css" rel="stylesheet" type="text/css">
+    <link href="web/style/menu.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./web/script/add_flashcards.js" defer></script>
 
     <meta charset="UTF-8">
     <title>Flashcards</title>

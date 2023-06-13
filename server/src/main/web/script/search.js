@@ -33,7 +33,7 @@ function createFlashcard(flashcard) {
     const clone = template.content.cloneNode(true);
 
     const image = clone.querySelector("img");
-    image.src = `/frontend/images/upload/${flashcard.icon}`;
+    image.src = `/web/images/upload/${flashcard.icon}`;
     const title = clone.querySelector("h2");
     title.innerHTML = flashcard.name;
     const description = clone.querySelector("p");

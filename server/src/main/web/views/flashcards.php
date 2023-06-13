@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="frontend/style/style.css" rel="stylesheet" type="text/css">
-    <link href="frontend/style/flashcards.css" rel="stylesheet" type="text/css">
-    <link href="frontend/style/menu.css" rel="stylesheet" type="text/css">
+    <link href="web/style/style.css" rel="stylesheet" type="text/css">
+    <link href="web/style/flashcards.css" rel="stylesheet" type="text/css">
+    <link href="web/style/menu.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/fa2eac051b.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./frontend/script/search.js" defer></script>
+    <script type="text/javascript" src="./web/script/search.js" defer></script>
     <meta charset="UTF-8">
     <title>Flashcards</title>
 </head>
@@ -22,7 +22,7 @@
                 ?>
 
                 <div id="project-1" onclick="redirect(<?= $flashcard->getFlashcardId(); ?>)">
-                    <img src="frontend/images/upload/<?= $flashcard->getIcon(); ?>">
+                    <img src="web/images/upload/<?= $flashcard->getIcon(); ?>">
                     <div>
                         <h2><?= $flashcard->getName(); ?></h2>
                         <p><?= $flashcard->getDescription(); ?></p>

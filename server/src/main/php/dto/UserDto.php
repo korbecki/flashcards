@@ -2,7 +2,7 @@
 
 
 
-class User
+class UserDto
 {
     private $userId;
     private $email;
@@ -10,6 +10,7 @@ class User
     private $name;
     private $surname;
     private $userName;
+    private $code;
 
     /**
      * @param $userId
@@ -18,8 +19,9 @@ class User
      * @param $name
      * @param $surname
      * @param $userName
+     * @param $code
      */
-    public function __construct($userId, $email, $password, $name, $surname, $userName)
+    public function __construct($userId, $email, $password, $name, $surname, $userName, $code)
     {
         $this->userId = $userId;
         $this->email = $email;
@@ -27,6 +29,7 @@ class User
         $this->name = $name;
         $this->surname = $surname;
         $this->userName = $userName;
+        $this->code = $code;
     }
 
     /**
@@ -125,6 +128,21 @@ class User
         $this->userName = $userName;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param mixed $code
+     */
+    public function setCode($code): void
+    {
+        $this->code = $code;
+    }
 
 
 }
