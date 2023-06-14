@@ -5,7 +5,7 @@ function addInput() {
 
     var questionInput = document.createElement("input");
     questionInput.type = "text";
-    questionInput.name = "question";
+    questionInput.name = "question" + counter;
     questionInput.placeholder = "Question ";
 
     var answerInput = document.createElement("input");

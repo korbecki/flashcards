@@ -41,12 +41,12 @@ function nextCard() {
     cardInner.style.transform = "rotateY(0deg)";
     document.querySelector('.flashcard .card-front input[type="text"]').value = "";
 
-    var pageId = document.querySelector('.pageId').innerHTML;
+    var pageId = document.querySelector('.pageId');
     var question = document.querySelector('.flashcard .question');
     var answer = document.querySelector('.flashcard .card-back .answer');
 
     const data = {
-        pageId: pageId
+        pageId: pageId.innerHTML
     };
 
     fetch("/getNextPage", {
@@ -56,7 +56,7 @@ function nextCard() {
     }).then(function (response) {
         return response.json();
     }).then(function (page) {
-        pageId = page.pageId;
+        pageId.innerHTML = page.page_id;
         question.innerHTML = page.question;
         answer.innerHTML = page.answer;
     });
@@ -66,4 +66,5 @@ function nextCard() {
 function endQuiz() {
     var flashcard = document.querySelector('.flashcard');
     flashcard.style.display = "none";
+    window.location.replace("http://localhost:8080/flashcards");
 }

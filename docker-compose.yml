@@ -18,15 +18,24 @@ services:
     volumes:
       - ./server/src/main:/app/
   mail:
-    build: ./mail
-    volumes:
-      - .m2:/root/.m2
-    stdin_open: true
-    tty: true
+    image: com.github.korbecki/auth.service:0.0.1-SNAPSHOT
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - "SERVER_PORT=9090"
+      - "SPRING_DATASOURCE_URL=jdbc:postgresql://pg_container:5432/flashcards"
+      - "SPRING_DATASOURCE_USERNAME=root"
+      - "SPRING_DATASOURCE_PASSWORD=root"
   db:
     container_name: pg_container
     image: postgres
     restart: always
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U flashcards" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root

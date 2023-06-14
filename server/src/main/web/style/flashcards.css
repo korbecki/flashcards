@@ -55,7 +55,7 @@ section {
 .flashcards > div {
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
